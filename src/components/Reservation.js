@@ -23,6 +23,7 @@ const Reservation = () => {
           variants={staggerContainer}
           initial='hidden'
           whileInView={'show'}
+          viewport={{ once: true, amount: 0.6 }}
           className=' text-center'
         >
           {/* title */}
@@ -34,7 +35,7 @@ const Reservation = () => {
         </motion.div>
 
         {/* form */}
-        <motion.form variants={fadeIn('up','tween',0.7, 1.6)} initial='hidden' whileInView={'show'} >
+        <motion.form variants={fadeIn('up','tween',0.7, 1.6)} initial='hidden' whileInView={'show'} viewport={{ once: true, amount: 0.6 }} >
           <div className=' flex flex-col lg:flex-row gap-y-4 items-center justify-between mb-8'>
             {/* date-picker */}
             <div>

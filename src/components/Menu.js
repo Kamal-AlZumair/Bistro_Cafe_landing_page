@@ -14,7 +14,7 @@ const Menu = () => {
         <motion.div variants={staggerContainer}
           initial='hidden'
           whileInView={'show'}
-          viewport={{once:false, amount:0.1}}
+          viewport={{ once: true, amount: 0.6 }}
           className=' container mx-auto flex flex-col items-center text-center'
         >
           <motion.h2 variants={fadeIn('down', 'tween',0.2,1.6)} className=' h2 capitalize text-white max-w-[400px] text-center'>{title}</motion.h2>
@@ -40,6 +40,7 @@ const Menu = () => {
           duration:1.6,
           ease:'easeOut',
         }}
+        viewport={{ once: true, amount: 0.6 }}
         className=' relative top-80 lg:top-92'>
         <div className=' container mx-auto'>
           <div className=' lg:-mt-24 min-h-[590px] z-30 mb-8 md:mb-4 xl:mb-16'>

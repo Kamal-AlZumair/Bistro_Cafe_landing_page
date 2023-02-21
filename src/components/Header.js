@@ -55,6 +55,7 @@ const Header = () => {
       variants={headerVariants}
       initial='hidden'
       animate={isActive ? 'show' : ''}
+      viewport={{ once: true, amount: 0.6 }}
       className=' fixed w-full max-w-[1800px] z-50 py-4'>
         <motion.div variants={staggerContainer} initial='hidden' animate='show' className="container mx-auto">
           <div className=' flex items-center justify-between px-4 lg:px-0 relative text-white'>
@@ -64,8 +65,8 @@ const Header = () => {
               variants={fadeIn('down','tween',1, 1.4)}
               className={` ${nav ? 'gap-y-0' : 'gap-y-2'} flex flex-col items-center justify-center w-12 h-12 p-3 order-2 lg:order-none cursor-pointer border-2 rounded-full`}
               onClick={()=>setNav(!nav)}>
-                <motion.div initial={{rotate:0}} animate={{rotate: nav ? -45 : 0, translateY: nav ? 2:0}} className='w-full h-[2px] bg-white'></motion.div>
-                <motion.div initial={{rotate:0}} animate={{rotate: nav ? 45 : 0}} className='w-full h-[2px] bg-white'></motion.div>
+                <motion.div initial={{rotate:0}} animate={{rotate: nav ? -45 : 0, translateY: nav ? 2:0}} viewport={{ once: true, amount: 0.6 }} className='w-full h-[2px] bg-white'></motion.div>
+                <motion.div initial={{rotate:0}} animate={{rotate: nav ? 45 : 0}} viewport={{ once: true, amount: 0.6 }} className='w-full h-[2px] bg-white'></motion.div>
               </motion.div>
 
             {/* logo */}
@@ -83,7 +84,7 @@ const Header = () => {
             </motion.div>
 
             {/* nav */}
-            <motion.div variants={navVariants} initial='hidden' animate={nav ? 'show' : ''} className=' absolute bg-accent w-[310px] h-[50vh] right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'>
+            <motion.div variants={navVariants} initial='hidden' animate={nav ? 'show' : ''} viewport={{ once: true, amount: 0.6 }} className=' absolute bg-accent w-[310px] h-[50vh] right-0 lg:left-0 top-[120px] bottom-0 z-50 rounded-lg shadow-xl'>
               <Navbar/>
             </motion.div>
           </div>

@@ -11,7 +11,7 @@ const Team = () => {
         {/* text & image  */}
         <div className=' flex flex-col lg:flex-row lg:gap-x-[120px] items-center lg:items-start'>
           {/* text */}
-          <motion.div variants={fadeIn('down','tween',0.6,1.6)} initial='hidden' whileInView={'show'}  className=' flex-1 text-center lg:text-left lg:pt-16'>
+          <motion.div variants={fadeIn('down','tween',0.6,1.6)} initial='hidden' whileInView={'show'} viewport={{ once: true, amount: 0.6 }}  className=' flex-1 text-center lg:text-left lg:pt-16'>
             <div className="pretitle">{pretitle}</div>
             <h2 className=' h2 capitalize'>{title}</h2>
             <p className=' mb-[60px]'>{sub1}</p>
@@ -25,7 +25,7 @@ const Team = () => {
             </div>
           </motion.div>
           {/* image */}
-          <motion.div variants={fadeIn('up', 'tween', 0.7, 1.6)} initial={'hidden'} whileInView={'show'} className=' flex-1'>
+          <motion.div variants={fadeIn('up', 'tween', 0.7, 1.6)} initial={'hidden'} whileInView={'show'} viewport={{ once: true, amount: 0.6 }} className=' flex-1'>
             <img src={chefImg} alt="" />
           </motion.div>
         </div>

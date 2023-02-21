@@ -12,7 +12,7 @@ const Hero = () => {
 		<section className="min-h-[980px] bg-hero bg-cover bg-right">
 			{/* header */}
 			<Header />
-			<motion.div variants={staggerContainer(0.3,1)} initial='hidden' whileInView={'show'} className=" container mx-auto min-h-[980px] flex justify-center items-center">
+			<motion.div variants={staggerContainer(0.3,1)} initial='hidden' whileInView={'show'} viewport={{ once: true, amount: 0.6 }} className=" container mx-auto min-h-[980px] flex justify-center items-center">
 				{/* text */}
 				<div className=" flex flex-col items-center text-center">
 					{/* pretitle */}

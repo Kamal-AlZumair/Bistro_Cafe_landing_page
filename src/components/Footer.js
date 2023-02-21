@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className=' relative top-96 z-20 bg-dark lg:bg-transparent lg:min-h-[620px] lg:bg-footer lg:bg-center lg:bg-no-repeat pt-20 lg:pt-32' >
       <div className="container mx-auto">
         {/* newsletter & info */}
-        <motion.div variants={staggerContainer} initial='hidden' whileInView={'show'} className=' h-full flex flex-col gap-y-4'>
+        <motion.div variants={staggerContainer} initial='hidden' whileInView={'show'} viewport={{ once: true, amount: 0.6 }} className=' h-full flex flex-col gap-y-4'>
           {/* newsletter */}
           <motion.div variants={fadeIn('up','tween', 0.4, 1.6)}>
             <Newsletter/>
